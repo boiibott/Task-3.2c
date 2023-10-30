@@ -23,7 +23,7 @@ void setup() {
     Serial.println("Connecting to WiFi...");
   }
 
-  Serial.println("Connected to WiFi");
+  Serial.println("Connected to WiFi"); 
   lightMeter.begin();
 }
 
@@ -34,7 +34,7 @@ void loop() {
   Serial.print(lux);
   Serial.println(" lx");
 
-  if (lux > 100 && Serial.read() == 's') {
+  if (lux > 100 ) {
     String queryString = "?value1=" + String(lux);
     
     // Get the current timestamp in the desired format
